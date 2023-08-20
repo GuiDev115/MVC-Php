@@ -1,0 +1,24 @@
+{
+    "name": "guidev/cursomvc",
+    "description": "Curso de MVC na Udemy com Composer e Php",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Guilherme F.",
+            "email": "guilherme.fabricio.115@mgmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/",
+            "core\\": "core/"
+        },
+        "files": [
+            "config/config.php"
+        ]
+    }
+}
