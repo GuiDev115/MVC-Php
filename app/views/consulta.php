@@ -4,13 +4,25 @@
     </div>
 
     <div class="col s12">
+
+    <table>
+        <tr>
+            <th>Nome</th><th>Email</th><th>Ações</th>
+        </tr>
+
         <?php foreach($consulta as $registro) : ?>
 
-            <p>
-                Nome: <?php echo $registro['nome'] ?> <br>
-                E-mail: <?php echo $registro['email'] ?>
-            </p>
+        <tr>
+            <td><?php echo $registro['nome'] ?></td>
+            <td><?php echo $registro['email'] ?></td>
+            <td>
+                <a href="?router=Site/editar/&id=<?php echo base64_encode($registro['id']) ?>">Editar</a> |
+                <a href="?router=Site/confirmaDelete/&id=<?php echo base64_encode($registro['id']) ?>" class = "red-text" >Deletar</a>
+            </td>
+        </tr>
+        <?php endforeach; ?>
+    
+    </table>
 
-        <?php endforeach?>
     </div>
 </div>
